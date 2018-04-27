@@ -21,7 +21,7 @@
 \begin{document}
 \maketitle
 
-\section{Figures and tables with overleaf-stata-tools etc}
+\section{Figures and tables with overleaf-stata-tools}
 
 The overleaf-stata-tools repository (https://github.com/bbdaniels/overleaf-stata-tools) contains several utilities for using Overleaf as a dynamic documents processor. For a full demo, clone https://git.overleaf.com/15274949kphkgfxjmhxb (this Overleaf project) to desktop to observe the file structure and the LuaLaTeX implementation of CSV tables in action. The repo contains:
 
@@ -50,7 +50,7 @@ The overleaf-stata-tools repository (https://github.com/bbdaniels/overleaf-stata
   \hline
   \luaexec{
     require('csv.lua')
-    t = dataToTable('outputs\regtest.csv')
+    t = dataToTable('outputs/regtest.csv')
     tex.sprint(tableToTeX(t, '\\hline',{2,10}))
     } \\
   \hline
@@ -60,7 +60,7 @@ The overleaf-stata-tools repository (https://github.com/bbdaniels/overleaf-stata
 
 \begin{figure}
 \centering
-\includegraphics[width=1\textwidth]{outputs\figure.eps}
+\includegraphics[width=1\textwidth]{outputs/figure.eps}
 \caption{\label{fig:figure}Demo figure}
 \end{figure}
 
@@ -69,7 +69,7 @@ The overleaf-stata-tools repository (https://github.com/bbdaniels/overleaf-stata
 \begin{tabular}{l|rrrrrrr}
   \luaexec{
     require('csv.lua')
-    t = dataToTable('outputs\test.csv')
+    t = dataToTable('outputs/test.csv')
     tex.sprint(tableToTeX(t, '\\hline',{2}))
     } \\
   \end{tabular}
