@@ -40,7 +40,7 @@ The overleaf-stata-tools repository (https://github.com/bbdaniels/overleaf-stata
 	\begin{enumerate}
 	\item Syntax and code base are substantially thanks to Michael Lokshin and Zurab Sajaia's excellent {\it xml\_tab} (http://ageconsearch.umn.edu/bitstream/122600/2/sjart\_dm0037.pdf).
     \end{enumerate}
-    
+
 \end{enumerate}
 
 \begin{table}
@@ -50,7 +50,7 @@ The overleaf-stata-tools repository (https://github.com/bbdaniels/overleaf-stata
   \hline
   \luaexec{
     require('csv.lua')
-    t = dataToTable('regtest.csv')
+    t = dataToTable('outputs\regtest.csv')
     tex.sprint(tableToTeX(t, '\\hline',{2,10}))
     } \\
   \hline
@@ -60,7 +60,7 @@ The overleaf-stata-tools repository (https://github.com/bbdaniels/overleaf-stata
 
 \begin{figure}
 \centering
-\includegraphics[width=1\textwidth]{figure.eps}
+\includegraphics[width=1\textwidth]{outputs\figure.eps}
 \caption{\label{fig:figure}Demo figure}
 \end{figure}
 
@@ -69,7 +69,7 @@ The overleaf-stata-tools repository (https://github.com/bbdaniels/overleaf-stata
 \begin{tabular}{l|rrrrrrr}
   \luaexec{
     require('csv.lua')
-    t = dataToTable('test.csv')
+    t = dataToTable('outputs\test.csv')
     tex.sprint(tableToTeX(t, '\\hline',{2}))
     } \\
   \end{tabular}
